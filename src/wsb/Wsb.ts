@@ -36,7 +36,7 @@ export class Wsb {
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal); // TODO: add decimal
     }
-    this.WSB = new ERC20(deployments.LAYERx.address, provider, 'WSB');
+    this.WSB = new ERC20(deployments.WSB.address, provider, 'WSB');
     this.VDS = new ERC20(deployments.Share.address, provider, 'VDS');
     this.VDB = new ERC20(deployments.Bond.address, provider, 'VDB');
 

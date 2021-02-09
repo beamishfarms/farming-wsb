@@ -1,6 +1,6 @@
 {
-  "LAYERx": {
-    "address": "0x036c064ecd43d53e35e1e9213d12b4354f458d51",
+  "WSB": {
+    "address": "0x42B040A89b9c915152fadBd67Ec7fD8C3DeeDb4E",
     "abi": [
       {
         "inputs": [
@@ -16,7 +16,6 @@
           }
         ],
         "payable": false,
-        "stateMutability": "nonpayable",
         "type": "constructor"
       },
       {
@@ -3750,7 +3749,7 @@
     ]
   },
   "WSBETHPool": {
-    "address": "0x4AC56B0372C049a3a7e2220ed535578b7978665a",
+    "address": "0x927B43C5Fd438891743029838Cd738dB85D04B23",
     "abi": [
       {
         "anonymous": false,
