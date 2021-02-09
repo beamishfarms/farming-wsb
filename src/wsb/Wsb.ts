@@ -11,7 +11,7 @@ import { getDisplayBalance } from '../utils/formatBalance';
  * An API module of Voodoo Dollar contracts.
  * All contract-interacting domain logic should be defined in here.
  */
-export class Layerx {
+export class Wsb {
   myAccount: string;
   provider: ethers.providers.Web3Provider;
   signer?: ethers.Signer;
@@ -19,7 +19,7 @@ export class Layerx {
   contracts: { [name: string]: Contract };
   externalTokens: { [name: string]: ERC20 };
 
-  LAYERx: ERC20;
+  WSB: ERC20;
   VDS: ERC20;
   VDB: ERC20;
 
@@ -36,7 +36,7 @@ export class Layerx {
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal); // TODO: add decimal
     }
-    this.LAYERx = new ERC20(deployments.LAYERx.address, provider, 'LAYERx');
+    this.WSB = new ERC20(deployments.LAYERx.address, provider, 'WSB');
     this.VDS = new ERC20(deployments.Share.address, provider, 'VDS');
     this.VDB = new ERC20(deployments.Bond.address, provider, 'VDB');
 
@@ -55,7 +55,7 @@ export class Layerx {
     for (const [name, contract] of Object.entries(this.contracts)) {
       this.contracts[name] = contract.connect(this.signer);
     }
-    const tokens = [this.LAYERx, this.VDS, this.VDB, ...Object.values(this.externalTokens)];
+    const tokens = [this.WSB, this.VDS, this.VDB, ...Object.values(this.externalTokens)];
     for (const token of tokens) {
       token.connect(this.signer);
     }
@@ -71,7 +71,7 @@ export class Layerx {
     const dollarPrice: BigNumber = await Treasury.getDollarPrice();
     return {
       priceInDAI: getDisplayBalance(dollarPrice),
-      totalSupply: await this.LAYERx.displayedTotalSupply(),
+      totalSupply: await this.WSB.displayedTotalSupply(),
     };
   }
 

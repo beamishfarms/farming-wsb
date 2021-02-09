@@ -22,7 +22,7 @@ import { getDisplayBalance } from '../../../utils/formatBalance';
 import DepositModal from './DepositModal';
 import WithdrawModal from './WithdrawModal';
 import TokenSymbol from '../../../components/TokenSymbol';
-import { Farm } from '../../../layerx';
+import { Farm } from '../../../wsb';
 
 interface StakeProps {
   farm: Farm;

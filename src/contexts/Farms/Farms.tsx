@@ -1,22 +1,22 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Context from './context';
-import useLayerx from '../../hooks/useLayerx';
-import { Farm } from '../../layerx';
+import useWsb from '../../hooks/useWsb';
+import { Farm } from '../../wsb';
 import config, { farmDefinitions } from '../../config';
 
 const Farms: React.FC = ({ children }) => {
   const [farms, setFarms] = useState<Farm[]>([]);
-  const layerx = useLayerx();
+  const wsb = useWsb();
 
   const fetchPools = useCallback(async () => {
     const farms: Farm[] = [];
 
     for (const farmInfo of Object.values(farmDefinitions)) {
       if (farmInfo.finished) {
-        if (!layerx.isUnlocked) continue;
+        if (!wsb.isUnlocked) continue;
 
         // only show pools staked by user
-        const balance = await layerx.stakedBalanceOnFarm(farmInfo.contract, layerx.myAccount);
+        const balance = await wsb.stakedBalanceOnFarm(farmInfo.contract, wsb.myAccount);
         if (balance.lte(0)) {
           continue;
         }
@@ -24,20 +24,20 @@ const Farms: React.FC = ({ children }) => {
       farms.push({
         ...farmInfo,
         address: config.deployments[farmInfo.contract].address,
-        depositToken: layerx.externalTokens[farmInfo.depositTokenName],
-        earnToken: farmInfo.earnTokenName == 'LAYERx' ? layerx.LAYERx : layerx.VDS,
+        depositToken: wsb.externalTokens[farmInfo.depositTokenName],
+        earnToken: farmInfo.earnTokenName == 'WSB' ? wsb.WSB : wsb.VDS,
       });
     }
     farms.sort((a, b) => (a.sort > b.sort ? 1 : -1));
     setFarms(farms);
-  }, [layerx, setFarms]);
+  }, [wsb, setFarms]);
 
   useEffect(() => {
-    if (layerx) {
+    if (wsb) {
       fetchPools()
         .catch(err => console.error(`Failed to fetch pools: ${err.stack}`));
     }
-  }, [layerx, fetchPools]);
+  }, [wsb, fetchPools]);
 
   return <Context.Provider value={{ farms: farms }}>{children}</Context.Provider>;
 };

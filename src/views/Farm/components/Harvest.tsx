@@ -15,7 +15,7 @@ import useHarvest from '../../../hooks/useHarvest';
 
 import { getDisplayBalance } from '../../../utils/formatBalance';
 import TokenSymbol from '../../../components/TokenSymbol';
-import { Farm } from '../../../layerx';
+import { Farm } from '../../../wsb';
 
 interface HarvestProps {
   farm: Farm;
@@ -24,6 +24,7 @@ interface HarvestProps {
 const Harvest: React.FC<HarvestProps> = ({ farm }) => {
   const earnings = useEarnings(farm.contract);
   const { onReward } = useHarvest(farm);
+  console.log('farm.earnToken.symbol :>> ', farm.earnToken.symbol);
 
   const tokenName = farm.earnTokenName === 'VDS' ? 'Share' : 'Dollar';
   return (

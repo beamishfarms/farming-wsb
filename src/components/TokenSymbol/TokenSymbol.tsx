@@ -33,7 +33,7 @@ const TokenSymbol: React.FC<VoodooLogoProps> = ({ symbol, size = 64 }) => {
   //   throw new Error(`Invalid VoodooLogo symbol: ${symbol}`);
   // }
 
-  if(symbol==='LAYERx' || symbol==='VDD' || symbol==='VDD_DAI-UNI-LPv2'){
+  if(symbol==='WSB' || symbol==='VDD' || symbol==='VDD_DAI-UNI-LPv2'){
     return <img src={logo} height="64" />
   } else if(symbol==='VoodooShare'  || symbol==='VDS_DAI-UNI-LPv2' || symbol==='VDS' ){
     return <VoodooShare />

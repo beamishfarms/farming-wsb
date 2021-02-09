@@ -1,18 +1,18 @@
 import { useCallback } from 'react';
-import useLayerx from './useLayerx';
+import useWsb from './useWsb';
 import useHandleTransactionReceipt from './useHandleTransactionReceipt';
-import { Farm } from '../layerx';
+import { Farm } from '../wsb';
 
 const useHarvest = (farm: Farm) => {
-  const layerx = useLayerx();
+  const wsb = useWsb();
   const handleTransactionReceipt = useHandleTransactionReceipt();
 
   const handleReward = useCallback(() => {
     handleTransactionReceipt(
-      layerx.harvest(farm.contract),
+      wsb.harvest(farm.contract),
       `Claim ${farm.earnTokenName} from ${farm.contract}`,
     );
-  }, [farm, layerx]);
+  }, [farm, wsb]);
 
   return { onReward: handleReward };
 };

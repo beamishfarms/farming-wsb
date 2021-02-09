@@ -12,7 +12,7 @@ import Stake from './components/Stake';
 
 import useFarm from '../../hooks/useFarm';
 import useRedeem from '../../hooks/useRedeem';
-import { Farm as FarmEntity } from '../../layerx';
+import { Farm as FarmEntity } from '../../wsb';
 
 const Farm: React.FC = () => {
   useEffect(() => window.scrollTo(0, 0));
@@ -66,7 +66,7 @@ const LPTokenHelpText: React.FC<{ farm: FarmEntity }> = ({ farm }) => {
   //   pairName = 'VDS-DAI pair';
   //   uniswapUrl = 'https://medium.com/@basiscash/#bas-dai';
   // }
-  pairName = 'LAYERx-ETH pair';
+  pairName = 'WSB-ETH pair';
   uniswapUrl = '#';
   return (
     <StyledLink href={uniswapUrl}>

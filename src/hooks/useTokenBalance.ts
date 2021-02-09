@@ -1,25 +1,25 @@
 import { useCallback, useEffect, useState } from 'react';
 import { BigNumber } from 'ethers';
-import ERC20 from '../layerx/ERC20';
-import useLayerx from './useLayerx';
+import ERC20 from '../wsb/ERC20';
+import useWsb from './useWsb';
 
 const useTokenBalance = (token: ERC20) => {
   const [balance, setBalance] = useState(BigNumber.from(0));
-  const layerx = useLayerx();
+  const wsb = useWsb();
 
   const fetchBalance = useCallback(async () => {
-    setBalance(await token.balanceOf(layerx.myAccount));
-  }, [layerx?.isUnlocked, token]);
+    setBalance(await token.balanceOf(wsb.myAccount));
+  }, [wsb?.isUnlocked, token]);
 
   useEffect(() => {
-    if (layerx?.isUnlocked) {
+    if (wsb?.isUnlocked) {
       fetchBalance().catch((err) =>
         console.error(`Failed to fetch token balance: ${err.stack}`),
       );
       let refreshInterval = setInterval(fetchBalance, 10000);
       return () => clearInterval(refreshInterval);
     }
-  }, [layerx?.isUnlocked, token]);
+  }, [wsb?.isUnlocked, token]);
 
   return balance;
 };

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Context as FarmsContext } from '../contexts/Farms';
-import { Farm, ContractName } from '../layerx';
+import { Farm, ContractName } from '../wsb';
 
 const useFarm = (contractName: ContractName): Farm => {
   const { farms } = useContext(FarmsContext);

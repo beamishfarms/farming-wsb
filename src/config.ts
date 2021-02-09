@@ -1,6 +1,6 @@
 import { ChainId } from '@uniswap/sdk';
-import { Configuration } from './layerx/config';
-import { FarmInfo } from './layerx';
+import { Configuration } from './wsb/config';
+import { FarmInfo } from './wsb';
 
 const configurations: { [env: string]: Configuration } = {
   development: {

@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { UseWalletProvider } from 'use-wallet';
 
 import FarmsProvider from './contexts/Farms';
-import LayerxProvider from './contexts/LayerxProvider';
+import WsbProvider from './contexts/WsbProvider';
 import ModalsProvider from './contexts/Modals';
 
 import Farms from './views/Farms';
@@ -37,7 +37,7 @@ const Providers: React.FC = ({ children }) => {
       <UseWalletProvider chainId={config.chainId}>
         <Provider store={store}>
           <Updaters />
-          <LayerxProvider>
+          <WsbProvider>
             <ModalsProvider>
               <FarmsProvider>
                 <>
@@ -46,7 +46,7 @@ const Providers: React.FC = ({ children }) => {
                 </>
               </FarmsProvider>
             </ModalsProvider>
-          </LayerxProvider>
+          </WsbProvider>
         </Provider>
       </UseWalletProvider>
     </ThemeProvider>

@@ -7,19 +7,19 @@ import Button from '../../Button';
 import Label from '../../Label';
 import Modal, { ModalProps } from '../../Modal';
 import ModalTitle from '../../ModalTitle';
-import useLayerx from '../../../hooks/useLayerx';
+import useWsb from '../../../hooks/useWsb';
 import TokenSymbol from '../../TokenSymbol';
 
 const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
-  const layerx = useLayerx();
+  const wsb = useWsb();
 
-  const bacBalance = useTokenBalance(layerx.LAYERx);
+  const bacBalance = useTokenBalance(wsb.WSB);
   const displayBacBalance = useMemo(() => getDisplayBalance(bacBalance), [bacBalance]);
 
-  const basBalance = useTokenBalance(layerx.VDS);
+  const basBalance = useTokenBalance(wsb.VDS);
   const displayBasBalance = useMemo(() => getDisplayBalance(basBalance), [basBalance]);
 
-  const babBalance = useTokenBalance(layerx.VDB);
+  const babBalance = useTokenBalance(wsb.VDB);
   const displayBabBalance = useMemo(() => getDisplayBalance(babBalance), [babBalance]);
 
   return (
@@ -28,10 +28,10 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
       <Balances>
         <StyledBalanceWrapper>
-          <TokenSymbol symbol="LAYERx" />
+          <TokenSymbol symbol="WSB" />
           <StyledBalance>
             <StyledValue>{displayBacBalance}</StyledValue>
-            <Label text="LAYERx Available" />
+            <Label text="WSB Available" />
           </StyledBalance>
         </StyledBalanceWrapper>
       </Balances>

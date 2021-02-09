@@ -1,20 +1,20 @@
 import { useCallback } from 'react';
-import useLayerx from './useLayerx';
-import { Farm } from '../layerx';
+import useWsb from './useWsb';
+import { Farm } from '../wsb';
 import useHandleTransactionReceipt from './useHandleTransactionReceipt';
 
 const useStake = (farm: Farm) => {
-  const layerx = useLayerx();
+  const wsb = useWsb();
   const handleTransactionReceipt = useHandleTransactionReceipt();
 
   const handleStake = useCallback(
     (amount: string) => {
       handleTransactionReceipt(
-        layerx.stake(farm.contract, amount, farm.depositToken.decimal),
+        wsb.stake(farm.contract, amount, farm.depositToken.decimal),
         `Stake ${amount} ${farm.depositTokenName} to ${farm.contract}`,
       );
     },
-    [farm, layerx],
+    [farm, wsb],
   );
   return { onStake: handleStake };
 };

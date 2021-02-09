@@ -14,7 +14,7 @@ const Farms: React.FC = () => {
           <PageHeader
             icon={'🏦'}
             title="Pick a Farm."
-            subtitle="Earn LAYERx by providing liquidity"
+            subtitle="Earn WSB by providing liquidity"
           />
           <FarmCards />
         </Route>

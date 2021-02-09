@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { Farm } from '../../layerx';
+import { Farm } from '../../wsb';
 
 export interface FarmsContext {
   farms: Farm[];
