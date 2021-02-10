@@ -24,14 +24,12 @@ const App: React.FC = () => {
       <Router>
       <Background>
         <Switch>
-          
             <Route path="/farm">
               <Farms />
             </Route>
             <Route path="/">
               <Home />
             </Route>
-            
           <Redirect from="/" to="farm" />
         </Switch>
         </Background>
