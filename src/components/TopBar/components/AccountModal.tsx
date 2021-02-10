@@ -9,6 +9,7 @@ import Modal, { ModalProps } from '../../Modal';
 import ModalTitle from '../../ModalTitle';
 import useWsb from '../../../hooks/useWsb';
 import TokenSymbol from '../../TokenSymbol';
+import Cross from '../../../icons/cross'
 
 const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const wsb = useWsb();
@@ -24,6 +25,9 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
   return (
     <Modal>
+      <div style={{ textAlign:'right'}}>
+        <Cross />
+      </div>
       <ModalTitle text="My Wallet" />
 
       <Balances>
@@ -31,7 +35,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <TokenSymbol symbol="WSB" />
           <StyledBalance>
             <StyledValue>{displayBacBalance}</StyledValue>
-            <Label text="WSB Available" />
+            <Label text="LAYERx Earned" />
           </StyledBalance>
         </StyledBalanceWrapper>
       </Balances>

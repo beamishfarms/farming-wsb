@@ -16,6 +16,7 @@ export const red = {
   100: '#C1C1FF',
   200: '#7575FF',
   500: '#9090FF',
+  900: '#FF0000'
 }
 
 export const grey = {
@@ -37,5 +38,5 @@ export const brown = {
 export const bg = '#000000';
 
 export const teal = {
-  200: '#64ffda'
+  200: '#B4B4B4'
 }

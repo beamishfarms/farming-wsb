@@ -33,7 +33,9 @@ const TopBar: React.FC = () => {
   )
 }
 
-const StyledTopBar = styled.div``
+const StyledTopBar = styled.div`
+  background: #11171E;
+`
 
 const StyledTopBarInner = styled.div`
   align-items: center;

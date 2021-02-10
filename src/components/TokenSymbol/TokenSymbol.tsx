@@ -11,6 +11,8 @@ import Layerx from '../../icons/layerx'
 import VoodooShare from '../../icons/voodooshare'
 import VoodooBond from '../../icons/voodoobond'
 import logo from '../../assets/img/logo.png';
+import settle from '../../img/settle.png'
+import approve from '../../img/approve.png'
 
 const logosBySymbol: {[title: string]: string} = {
   'VDD': vddLogo,
@@ -33,8 +35,10 @@ const TokenSymbol: React.FC<VoodooLogoProps> = ({ symbol, size = 64 }) => {
   //   throw new Error(`Invalid VoodooLogo symbol: ${symbol}`);
   // }
 
+  console.log(symbol)
+
   if(symbol==='WSB' || symbol==='VDD' || symbol==='VDD_DAI-UNI-LPv2'){
-    return <img src={logo} height="64" />
+    return <img src={settle} width={100} height={100} alt='settle'/>
   } else if(symbol==='VoodooShare'  || symbol==='VDS_DAI-UNI-LPv2' || symbol==='VDS' ){
     return <VoodooShare />
   } else if (symbol==='VoodooBond' || symbol==='VDB') {
@@ -44,7 +48,7 @@ const TokenSymbol: React.FC<VoodooLogoProps> = ({ symbol, size = 64 }) => {
   } else if (symbol==='ETH_PROPHET-UNI-LPv2') {
     return <img width={64} height={64} style={{borderRadius:'50px'}} src="https://i.ibb.co/xHHgKJ4/icon.jpg" alt="Trinity"/>
   } else if (symbol==='WSB_ETH-UNI-LPv2') {
-    return <img width={64} height={64} src="https://assets.coingecko.com/coins/images/13379/small/trinity_logo.png?1608030983" alt="Trinity"/>
+    return <img width={100} height={100} src={approve} alt="approve"/>
   }else {
     return (
       <img

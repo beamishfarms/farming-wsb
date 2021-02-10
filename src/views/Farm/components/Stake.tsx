@@ -92,6 +92,7 @@ const Stake: React.FC<StakeProps> = ({ farm }) => {
                 }
                 onClick={approve}
                 text={`Approve ${farm.depositTokenName}`}
+                size='lg'
               />
             ) : (
               <>

@@ -25,7 +25,7 @@ const StyledLink = styled(NavLink)`
     color: ${props => props.theme.color.grey[500]};
   }
   &.active {
-    color: ${props => props.theme.color.primary.main};
+    color: ${props => props.theme.color.white};
   }
 `
 

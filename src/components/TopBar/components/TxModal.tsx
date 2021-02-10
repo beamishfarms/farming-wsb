@@ -9,6 +9,7 @@ import ModalActions from '../../ModalActions';
 import Spacer from '../../Spacer';
 import { isTransactionRecent, useAllTransactions, useClearAllTransactions } from '../../../state/transactions/hooks';
 import { Trash } from 'react-feather';
+import Trans from '../../../icons/transaction'
 
 const TxModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const allTransactions = useAllTransactions();
@@ -51,11 +52,14 @@ const TxModal: React.FC<ModalProps> = ({ onDismiss }) => {
         </>
       )}
       {isEmpty && (
-        <Label text="No transactions." color="#777" />
+        <Center>
+          <Trans style={{marginBottom: '20px'}} />
+          <Label text="No transactions." color="#777" />
+        </Center>
       )}
-      <ModalActions>
+      {/* <ModalActions>
         <Button text="Close" onClick={onDismiss} />
-      </ModalActions>
+      </ModalActions> */}
     </StyledModal>
   )
 }
@@ -67,6 +71,7 @@ const StyledModal = styled(Modal)`
 const StyledTitleArea = styled.div`
   display: flex;
   align-items: center;
+  
   height: ${props => props.theme.topBarSize}px;
   margin-top: ${props => -props.theme.spacing[4]}px;
 `;
@@ -85,6 +90,14 @@ const StyledClearIconWrapper = styled.div`
 const StyledTransactionList = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const Center = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 `;
 
 // we want the latest one to come first, so return negative if a is after b

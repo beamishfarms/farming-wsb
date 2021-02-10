@@ -24,7 +24,7 @@ interface HarvestProps {
 const Harvest: React.FC<HarvestProps> = ({ farm }) => {
   const earnings = useEarnings(farm.contract);
   const { onReward } = useHarvest(farm);
-  console.log('farm.earnToken.symbol :>> ', farm.earnToken.symbol);
+  // console.log('farm.earnToken.symbol :>> ', farm.earnToken.symbol);
 
   const tokenName = farm.earnTokenName === 'VDS' ? 'Share' : 'Dollar';
   return (
@@ -36,10 +36,10 @@ const Harvest: React.FC<HarvestProps> = ({ farm }) => {
               <TokenSymbol symbol={farm.earnToken.symbol} />
             </CardIcon>
             <Value value={getDisplayBalance(earnings)} />
-            <Label text="WSB Earned" />
+            <Label text="LAYERx Earned" />
           </StyledCardHeader>
           <StyledCardActions>
-            <Button onClick={onReward} disabled={earnings.eq(0)} text="Settle"  />
+            <Button onClick={onReward} disabled={earnings.eq(0)} text="Settle" size='lg'  />
           </StyledCardActions>
         </StyledCardContentInner>
       </CardContent>
