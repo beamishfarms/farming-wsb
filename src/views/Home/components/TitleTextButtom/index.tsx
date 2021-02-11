@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 interface TitleTextButtom {
@@ -17,7 +17,13 @@ const TitleTextButtom: React.FC<TitleTextButtom> = (props) => {
     <div>
       <StyledTitle style={{fontSize:props.titlesize}}>{props.title}</StyledTitle>
       <StyledText style={{fontSize:props.textsize, color:props.textcolor}}>{props.text}</StyledText>
-      <StyledButton>{props.button}</StyledButton>
+      <Link to='/farm' >
+        <StyledButton >
+        
+         {props.button}
+        
+        </StyledButton>
+      </Link>
     </div>
   );
 };
@@ -39,5 +45,7 @@ const StyledButton = styled.button`
   color: #FFFFFF;
   font-size: 18px;
   border: 0;
+  outline: 0;
+  cursor: pointer;
 `
 export default TitleTextButtom;

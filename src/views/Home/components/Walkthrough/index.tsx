@@ -15,7 +15,7 @@ const Walkthrough: React.FC = () => {
       <Container>
         <StyledTitle>Walkthrough</StyledTitle>
         <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
-        <iframe 
+        <StyledIframe 
         width="100%" 
         height="720" 
         src="https://www.youtube.com/embed/4KGsgpFiswQ" 
@@ -23,7 +23,7 @@ const Walkthrough: React.FC = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowFullScreen
         title='Porter Robinson'
-        ></iframe>
+        ></StyledIframe>
         <div style={{ height: '150px'}}></div>
       </Container>
       </StyledWalkthrough>
@@ -53,6 +53,9 @@ const StyledText = styled.p`
   width: 700px;
   text-align: center;
   margin: 0 auto 60px auto;
+`
+const StyledIframe = styled.iframe`
+
 `
 
 export default Walkthrough;
