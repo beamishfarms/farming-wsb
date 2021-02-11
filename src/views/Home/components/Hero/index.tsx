@@ -14,7 +14,10 @@ const Hero: React.FC = () => {
       <StyledHero style={{backgroundImage: `url(${background})`}}> 
       <Container>
         <Grid>
-          <TitleTextButtom />
+          <TitleTextButtom 
+          title='Manage your Cryptos anytime'
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit. Nam at iaculis enim, vitae dignissim orci.'
+          button='GO TO APP' />
           <Img src={wsblanding}/>
           <Features />
         </Grid>
@@ -39,6 +42,7 @@ const Grid = styled.div`
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
+  padding: 120px 0 0 0;
 `
 
 

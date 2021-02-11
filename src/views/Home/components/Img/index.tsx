@@ -11,14 +11,14 @@ const Img: React.FC<ImgProps> = (props) => {
 
   return (
     <>
-      <img src={props.src} alt={props.src} />
+    <StyledImg src={props.src} alt={props.src}/>
     </>
   );
 };
 
-// const StyledImg = styled.img`
-//   min-width: 190px  
-//   min-height: 190px
-// `
+const StyledImg = styled.img`
+  width: 100%;
+  max-width: 800px;
+`
 
 export default Img;

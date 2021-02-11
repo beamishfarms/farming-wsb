@@ -37,7 +37,7 @@ const StyledFeatures = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column: 1 / 3;
   gap: 16px;
-  margin-bottom: 120px;
+  margin: 120px 0;
 `
 
 export default Features;
