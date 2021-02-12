@@ -19,6 +19,7 @@ const Img: React.FC<ImgProps> = (props) => {
 const StyledImg = styled.img`
   width: 100%;
   max-width: 800px;
+  max-height: 700px;
 `
 
 export default Img;

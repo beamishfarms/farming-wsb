@@ -17,7 +17,7 @@ const Walkthrough: React.FC = () => {
         <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
         <StyledIframe 
         width="100%" 
-        height="100%" 
+        height="720" 
         src="https://www.youtube.com/embed/4KGsgpFiswQ" 
         frameBorder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -43,7 +43,7 @@ const Container = styled.div`
   margin: 0 auto;
   @media (max-width: 768px) {
     width: 100%;
-    
+    text-align: center;
   }
 `
 
@@ -64,8 +64,9 @@ const StyledText = styled.p`
 `
 const StyledIframe = styled.iframe`
 @media (max-width: 768px) {
-  width: 90vw;
-
+  width: 90%;
+  min-height: 200px;
+  height: 40vh;
 }
 `
 

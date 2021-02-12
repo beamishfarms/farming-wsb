@@ -16,9 +16,9 @@ const Footer: React.FC = () => {
         <Container>
           <StyledTitle>Contract Audited By</StyledTitle>
           <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-           <FooterIcon />
-          </div>
+          <StyledIcon >
+           <FooterIcon style={{width: '100%'}} />
+          </StyledIcon>
           <StyledText2 >* license structure is subject to change as per the needs and wants of the market time to time. ** Referring to the ongoing 150-day Rewards for Holders and LPs. Sniper will be more expensive.</StyledText2>
         </Container>
       </StyledFooter>
@@ -39,6 +39,7 @@ const StyledText = styled.p`
   margin: 0 auto 50px auto;
   @media (max-width: 768px) {
     width: 90%;
+
   }
 `
 const StyledText2 = styled.p`
@@ -49,7 +50,15 @@ const StyledText2 = styled.p`
   color: #B4B4B4;
   @media (max-width: 768px) {
     width: 90%;
-    
+    margin: 0 auto;
+  }
+`
+const StyledIcon = styled.div`
+  display: flex;
+  alignItems: center
+  justifyContent: center;
+  @media (max-width: 768px) {
+
   }
 `
 
@@ -76,6 +85,7 @@ const CopyRight = styled.p`
   text-align: center;
   padding: 20px 0;
   margin: 0;
+  width: 90%;
 `
 
 

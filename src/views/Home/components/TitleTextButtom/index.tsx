@@ -18,11 +18,13 @@ const TitleTextButtom: React.FC<TitleTextButtom> = (props) => {
       <StyledTitle style={{fontSize:props.titlesize}}>{props.title}</StyledTitle>
       <StyledText style={{fontSize:props.textsize, color:props.textcolor}}>{props.text}</StyledText>
       <Link to='/farm' >
+        <StyledDiv>
         <StyledButton >
         
          {props.button}
         
         </StyledButton>
+        </StyledDiv>
       </Link>
     </div>
   );
@@ -31,10 +33,11 @@ const TitleTextButtom: React.FC<TitleTextButtom> = (props) => {
 const StyledTitle = styled.h3`
   font-size: 50px;
   margin: 0;
-  width: 480px;
+  max-width: 650px;
   @media (max-width: 768px) {
-    width: 90%;
-    
+    width: 100%;
+    font-size: 41px;
+    text-align: center;
   }
 `
 const StyledText = styled.p`
@@ -42,7 +45,8 @@ font-size: 18px;
 width: 480px;
 @media (max-width: 768px) {
   width: 90%;
-  
+  text-align: center;
+  margin: 0 auto;
 }
 `
 const StyledButton = styled.button`
@@ -55,5 +59,12 @@ const StyledButton = styled.button`
   border: 0;
   outline: 0;
   cursor: pointer;
+  text-decoration: none;
+`
+const StyledDiv = styled.div`
+@media (max-width: 768px) {
+  display: flex;
+  justify-content: center;
+}
 `
 export default TitleTextButtom;

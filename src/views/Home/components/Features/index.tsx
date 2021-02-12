@@ -39,7 +39,8 @@ const StyledFeatures = styled.div`
   gap: 16px;
   margin: 120px 0;
   @media (max-width: 768px) {
-    display: block;    
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 `
 

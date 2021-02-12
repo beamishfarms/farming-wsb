@@ -34,7 +34,8 @@ const StyledTitle = styled.h3`
   
 `
 const StyledText = styled.p`
-  
+  width: 90%;
+  margin: 0 auto;
 `
 const Flex = styled.div`
   display: flex;
@@ -44,7 +45,8 @@ const Flex = styled.div`
 `
 const StyledCard = styled.div`
   background-color: #11171E;
-  height: 332px;
+  min-height: 332px;
+  padding: 10px;
 `
 
 

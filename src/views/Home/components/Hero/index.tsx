@@ -18,7 +18,10 @@ const Hero: React.FC = () => {
           title='Manage your Cryptos anytime'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit. Nam at iaculis enim, vitae dignissim orci.'
           button='GO TO APP' />
+          <StyledGrid>
+
           <Img src={wsblanding}/>
+          </StyledGrid>
           <Features />
         </Grid>
       </Container>
@@ -38,11 +41,24 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr auto;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
+const StyledGrid = styled.div`
+  @media (max-width: 768px) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin: 0 0 50px 0;
+  }
 `
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
   padding: 120px 0 0 0;
+  @media (max-width: 768px) {
+    padding: 50px 0 0 0;
+  }
 `
 
 
