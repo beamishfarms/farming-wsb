@@ -6,12 +6,13 @@ import Features from '../Features'
 
 import wsblanding from '../../../../img/wsblanding.png'
 import background from '../../../../img/bgwsb1.png'
+import mobilebackground from '../../../../img/mobilebackground.png'
 
 const Hero: React.FC = () => {
 
   return (
     <>
-      <StyledHero style={{backgroundImage: `url(${background})`}}> 
+      <StyledHero> 
       <Container>
         <Grid>
           <TitleTextButtom 
@@ -32,10 +33,16 @@ const Hero: React.FC = () => {
 };
 
 const StyledHero = styled.div`
-backgroundImage: 'url(${background})';
+background-image: url(${background});
 background-size: cover;
 background-position: bottom center;
 background-repeat: no-repeat;
+@media (max-width: 768px) {
+  background-image: url(${mobilebackground});
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 `
 const Grid = styled.div`
   display: grid;
@@ -49,7 +56,7 @@ const StyledGrid = styled.div`
   @media (max-width: 768px) {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    margin: 0 0 50px 0;
+    margin: 20px 0 50px 0;
   }
 `
 const Container = styled.div`
