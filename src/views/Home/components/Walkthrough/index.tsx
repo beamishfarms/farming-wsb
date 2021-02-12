@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import cross from '../../../../img/cross.png'
-
+import SocialNav from '../SocialNav'
   
 
 const Walkthrough: React.FC = () => {
@@ -24,6 +24,10 @@ const Walkthrough: React.FC = () => {
         allowFullScreen
         title='Porter Robinson'
         ></StyledIframe> */}
+        <div style={{display: 'flex', justifyContent: 'center', margin: '200px auto'}}>
+
+        <SocialNav />
+        </div>
         <div style={{ height: '150px'}}></div>
       </Container>
       </StyledWalkthrough>

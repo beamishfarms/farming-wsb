@@ -5,6 +5,7 @@ import Button from '../../Button';
 import { isTransactionRecent, useAllTransactions } from '../../../state/transactions/hooks';
 import useModal from '../../../hooks/useModal';
 import TxModal from './TxModal';
+import Cross from '../../../icons/cross'
 
 interface TxButtonProps {}
 

@@ -6,25 +6,44 @@ import TitleTextButtom from '../TitleTextButtom'
 import mobile from '../../../../img/mobile1@2x.png'
 import dollar from '../../../../img/dollar.png'
 
-  
 
 const Main: React.FC = () => {
+  
+  
+  let button = true ;
+  
+  function buttonAggregator() {
 
+   return button = true
+  }
+  function buttonFarming() {
+
+    return button = false
+  }
+
+
+  console.log(button)
   return (
     <>
       <StyledMain style={{backgroundImage: `url(${dollar})`}}>
         <StyledTitle>Getting Started</StyledTitle>
         <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
-        <StyledBar>
-          <StyledRedBar >
+          <StyledBar >
+          <StyledRedBar onClick={buttonAggregator}>
             <StyledText style= {{color: '#FFFFFF'}}>Aggregator</StyledText>
           </StyledRedBar>
-          <StyledRedBar style={{background: 'none'}}>
+          <StyledRedBar onClick={buttonFarming} style={{background: 'none' }}>
 
           <StyledText style= {{color: '#FFFFFF'}}>Farming</StyledText>
           </StyledRedBar>
         </StyledBar>
-        <Grid>
+        
+        {(() => {
+        do{
+        if (button) {
+          return (
+          <>
+            <Grid >
           <TitleTextButtom 
           title='AGGREGATOR' 
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae augue non dui volutpat sagittis. Ut imperdiet sapien ut auctor mattis. Mauris volutpat sed quam fringilla auctor. Mauris convallis sapien at tincidunt sollicitudin. Quisque quis elementum tellus. Integer molestie commodo mi et accumsan. Phasellus egestas, quam nec cursus rhoncus, arcu ipsum lacinia turpis, sit amet aliquet nibh arcu sit amet erat. Fusce dictum ante in elementum ultricies.'
@@ -36,6 +55,18 @@ const Main: React.FC = () => {
             <Img src={mobile}/>
           </StyledGrid>
         </Grid>
+        </>
+          )
+        } else {
+          return (
+            <>
+        <Img src={mobile}/>
+            </>
+          )
+        }
+      }while(true)
+      })()}
+        
       </StyledMain>
     </>
   );
@@ -51,7 +82,7 @@ const StyledGrid = styled.div`
   }
 `
 
-const Grid = styled.div`
+let Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @media (max-width: 768px) {
@@ -65,7 +96,7 @@ const StyledTitle = styled.h3`
   text-align: center;
   margin: 0;
 `
-const StyledBar = styled.h3`
+const StyledBar = styled.div`
   height: 60px;
   border-radius: 100px;
   background-color: #1C1919;
@@ -76,12 +107,12 @@ const StyledBar = styled.h3`
   margin: 0 0 50px 0;
 
 `
-const StyledRedBar = styled.h3`
+const StyledRedBar = styled.div`
   height: 50px;
   border-radius: 100px;
   background-color: #FF0000;
   width: 50%;
-  
+  cursor: pointer;
 
 `
 const StyledText = styled.p`
