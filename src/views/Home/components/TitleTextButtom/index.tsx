@@ -17,7 +17,7 @@ const TitleTextButtom: React.FC<TitleTextButtom> = (props) => {
     <div>
       <StyledTitle style={{fontSize:props.titlesize}}>{props.title}</StyledTitle>
       <StyledText style={{fontSize:props.textsize, color:props.textcolor}}>{props.text}</StyledText>
-      <Link to='/farm' >
+      <Link to='/farm' style={{textDecoration: 'none'}} >
         <StyledDiv>
         <StyledButton >
         
@@ -58,8 +58,7 @@ const StyledButton = styled.button`
   font-size: 18px;
   border: 0;
   outline: 0;
-  cursor: pointer;
-  text-decoration: none;
+  cursor: pointer;  
 `
 const StyledDiv = styled.div`
 @media (max-width: 768px) {
