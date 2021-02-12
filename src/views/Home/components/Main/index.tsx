@@ -33,6 +33,10 @@ const Main: React.FC = () => {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 768px) {
+    display: block;
+    
+  }
 `
 
 const StyledTitle = styled.h3`
@@ -46,6 +50,10 @@ const StyledText = styled.p`
   width: 700px;
   text-align: center;
   margin: 13px auto 50px auto;
+  @media (max-width: 768px) {
+    width: 90%;
+    
+  }
 `
 
 const StyledMain = styled.main`

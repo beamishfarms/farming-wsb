@@ -32,10 +32,18 @@ const StyledTitle = styled.h3`
   font-size: 50px;
   margin: 0;
   width: 480px;
+  @media (max-width: 768px) {
+    width: 90%;
+    
+  }
 `
 const StyledText = styled.p`
 font-size: 18px;
 width: 480px;
+@media (max-width: 768px) {
+  width: 90%;
+  
+}
 `
 const StyledButton = styled.button`
   height: 60px;

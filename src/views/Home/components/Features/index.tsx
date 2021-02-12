@@ -38,6 +38,9 @@ const StyledFeatures = styled.div`
   grid-column: 1 / 3;
   gap: 16px;
   margin: 120px 0;
+  @media (max-width: 768px) {
+    display: block;    
+  }
 `
 
 export default Features;

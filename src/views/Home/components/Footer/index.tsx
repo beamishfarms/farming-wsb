@@ -37,6 +37,9 @@ const StyledText = styled.p`
   width: 700px;
   text-align: center;
   margin: 0 auto 50px auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 const StyledText2 = styled.p`
   font-size: 18px;
@@ -44,6 +47,10 @@ const StyledText2 = styled.p`
   text-align: center;
   margin: 50px auto 50px auto;
   color: #B4B4B4;
+  @media (max-width: 768px) {
+    width: 90%;
+    
+  }
 `
 
 const StyledFooter = styled.div`
@@ -57,6 +64,11 @@ const Container = styled.div`
   width: 100%;
   height: 600px;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 100%;
+    
+  }
+
 `
 const CopyRight = styled.p`
   font-size: 18px;
