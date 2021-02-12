@@ -91,7 +91,7 @@ const FarmNotFound = () => {
 const UnlockWallet = () => {
   const { connect } = useWallet();
   return (
-    <Center style={{flexDirection: 'column', width:'600px'}}>
+    <Center >
       <div style={{marginBottom:'50px'}}>
         <img src={require("../../img/chef.png")} alt="Chef"/>
       </div>
@@ -142,10 +142,15 @@ const StyledCardWrapper = styled.div`
 `;
 
 const Center = styled.div`
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+display: flex;
+flex: 1;
+width: 600px;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+@media only screen and (max-width: 768px){
+  width: 280px;
+}
 `;
 
 export default Farm;

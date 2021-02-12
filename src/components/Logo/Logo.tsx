@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
   return (
     <StyledLogo>      
       <StyledLink href="/">
-        <img src={logo} alt='logo' height="50" style={{ marginTop: -4 }}/>
+        <img src={logo} alt='logo' height="50" style={{ marginTop: -4 }} width='100%'/>
       </StyledLink>
     </StyledLogo>
   );

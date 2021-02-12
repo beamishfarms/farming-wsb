@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
 };
 
 const StyledHero = styled.div`
-backgroundImage: 'url(${background})'
+backgroundImage: 'url(${background})';
 background-size: cover;
 background-position: bottom center;
 background-repeat: no-repeat;
