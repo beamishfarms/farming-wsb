@@ -3,6 +3,9 @@ import styled from 'styled-components'
 
 import cross from '../../../../img/cross.png'
 import SocialNav from '../SocialNav'
+import Telegram from '../../../../icons/red/Telegram.svg'
+import Twitter from '../../../../icons/red/Twitter.svg'
+import Discord from '../../../../icons/red/Discord.svg'  
   
 
 const Walkthrough: React.FC = () => {
@@ -24,10 +27,13 @@ const Walkthrough: React.FC = () => {
         allowFullScreen
         title='Porter Robinson'
         ></StyledIframe> */}
-        <div style={{display: 'flex', justifyContent: 'center', margin: '200px auto'}}>
-
-        <SocialNav />
-        </div>
+        
+        <StyledNavDiv >
+          <img width='75%' src={Telegram} alt={Telegram} style={{}}/>
+          <img width='75%' src={Twitter} alt={Twitter} />
+          <img width='75%' src={Discord} alt={Discord} />
+        </StyledNavDiv>
+       
         <div style={{ height: '150px'}}></div>
       </Container>
       </StyledWalkthrough>
@@ -40,6 +46,19 @@ backgroundImage: 'url(${cross})'
 background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
+`
+const StyledNavDiv = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap:50px;
+
+margin: 150px auto;
+width: 50%;
+@media (max-width: 768px) {
+  width: 90%;
+  margin: 50px auto;
+}
+
 `
 
 const Container = styled.div`
