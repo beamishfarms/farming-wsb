@@ -84,7 +84,7 @@ const CopyRight = styled.p`
   color: rgba(180, 180, 180, 0.5);
   text-align: center;
   padding: 20px 0;
-  margin: 0;
+  margin: 0 auto;
   width: 90%;
 `
 

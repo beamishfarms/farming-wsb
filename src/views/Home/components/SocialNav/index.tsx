@@ -1,11 +1,7 @@
 import React from 'react'
 import Telegram from '../../../../icons/red/Telegram.svg'
 import Twitter from '../../../../icons/red/Twitter.svg'
-import Discord from '../../../../icons/red/Discord.svg'
-
-
-
-  
+import Discord from '../../../../icons/red/Discord.svg'  
 
 const SocialNav: React.FC = () => {
 

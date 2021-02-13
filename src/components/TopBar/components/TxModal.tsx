@@ -12,6 +12,7 @@ import { Trash } from 'react-feather';
 import Trans from '../../../icons/transaction'
 import Cross from '../../../icons/cross'
 
+
 const TxModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const allTransactions = useAllTransactions();
   const { clearAllTransactions } = useClearAllTransactions();

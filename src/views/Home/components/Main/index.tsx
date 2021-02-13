@@ -1,49 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Img from '../Img'
 import TitleTextButtom from '../TitleTextButtom'
 
 import mobile from '../../../../img/mobile1@2x.png'
 import dollar from '../../../../img/dollar.png'
+import farm from '../../../../img/farm.png'
+
 
 
 const Main: React.FC = () => {
   
-  
-  let button = true ;
-  
-  function buttonAggregator() {
-
-   return button = true
-  }
-  function buttonFarming() {
-
-    return button = false
-  }
-
-
-  console.log(button)
+  const [tab, setTab] = useState('agregattor')
   return (
     <>
       <StyledMain style={{backgroundImage: `url(${dollar})`}}>
         <StyledTitle>Getting Started</StyledTitle>
         <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
           <StyledBar >
-          <StyledRedBar onClick={buttonAggregator}>
+          <StyledRedBar onClick={() => setTab('agregattor')}>
             <StyledText style= {{color: '#FFFFFF'}}>Aggregator</StyledText>
           </StyledRedBar>
-          <StyledRedBar onClick={buttonFarming} style={{background: 'none' }}>
+          <StyledRedBar onClick={() => setTab('farming')} style={{background: 'none' }}>
 
           <StyledText style= {{color: '#FFFFFF'}}>Farming</StyledText>
           </StyledRedBar>
         </StyledBar>
-        
-        {(() => {
-        do{
-        if (button) {
-          return (
-          <>
-            <Grid >
+        {tab === 'agregattor' && 
+        <Grid >
           <TitleTextButtom 
           title='AGGREGATOR' 
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae augue non dui volutpat sagittis. Ut imperdiet sapien ut auctor mattis. Mauris volutpat sed quam fringilla auctor. Mauris convallis sapien at tincidunt sollicitudin. Quisque quis elementum tellus. Integer molestie commodo mi et accumsan. Phasellus egestas, quam nec cursus rhoncus, arcu ipsum lacinia turpis, sit amet aliquet nibh arcu sit amet erat. Fusce dictum ante in elementum ultricies.'
@@ -54,19 +38,8 @@ const Main: React.FC = () => {
           <StyledGrid>
             <Img src={mobile}/>
           </StyledGrid>
-        </Grid>
-        </>
-          )
-        } else {
-          return (
-            <>
-        <Img src={mobile}/>
-            </>
-          )
-        }
-      }while(true)
-      })()}
-        
+        </Grid> }
+        {tab === 'farming' && <img style={{textAlign:'center', width:'100%'}} src={farm} alt='farm'/> }
       </StyledMain>
     </>
   );
@@ -82,7 +55,7 @@ const StyledGrid = styled.div`
   }
 `
 
-let Grid = styled.div`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @media (max-width: 768px) {
