@@ -11,6 +11,7 @@ import { isTransactionRecent, useAllTransactions, useClearAllTransactions } from
 import { Trash } from 'react-feather';
 import Trans from '../../../icons/transaction'
 import Cross from '../../../icons/cross'
+import useModal from '../../../hooks/useModal';
 
 
 const TxModal: React.FC<ModalProps> = ({ onDismiss }) => {
@@ -28,8 +29,8 @@ const TxModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const isEmpty = (confirmed?.length + pending?.length) == 0;
   return (
     <StyledModal>
-      <div style={{ textAlign:'right'}}>
-        <Cross />
+      <div style={{ textAlign:'right', paddingBottom: '20px'}}>
+        <Cross onClick={() => onDismiss()} />
       </div>
       <StyledTitleArea>
       
