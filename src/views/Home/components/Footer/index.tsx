@@ -15,14 +15,17 @@ const Footer: React.FC = () => {
       <StyledFooter style={{backgroundImage: `url(${footer})`}}> 
         <Container>
           <StyledTitle>Contract Audited By</StyledTitle>
-          <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
+          
           <StyledIcon >
+            <a style={{margin: '0 auto'}} href="https://chainsulting.de">
+
            <FooterIcon style={{width: '100%'}} />
+            </a>
           </StyledIcon>
-          <StyledText2 >* license structure is subject to change as per the needs and wants of the market time to time. ** Referring to the ongoing 150-day Rewards for Holders and LPs. Sniper will be more expensive.</StyledText2>
+          
         </Container>
       </StyledFooter>
-      <CopyRight>Copyright © 2020 NEX. All Rights Reserved.</CopyRight>
+      <CopyRight>Copyright 2021 WSB. All Rights Reserved.</CopyRight>
     </>
   );
 };
@@ -30,7 +33,7 @@ const Footer: React.FC = () => {
 const StyledTitle = styled.h3`
   font-size: 36px;
   text-align: center;
-  padding-top: 160px;
+  
 `
 const StyledText = styled.p`
   font-size: 18px;
@@ -73,6 +76,10 @@ const Container = styled.div`
   width: 100%;
   height: 600px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 768px) {
     width: 100%;
     

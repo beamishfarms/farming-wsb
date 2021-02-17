@@ -6,6 +6,7 @@ import SocialNav from '../SocialNav'
 import Telegram from '../../../../icons/red/Telegram.svg'
 import Twitter from '../../../../icons/red/Twitter.svg'
 import Discord from '../../../../icons/red/Discord.svg'  
+import walkthrough from '../../../../img/walkthrough.jpg'
   
 
 const Walkthrough: React.FC = () => {
@@ -28,13 +29,14 @@ const Walkthrough: React.FC = () => {
         title='Porter Robinson'
         ></StyledIframe> */}
         
-        <StyledNavDiv >
+        {/* <StyledNavDiv >
           <img width='75%' src={Telegram} alt={Telegram} style={{}}/>
           <img width='75%' src={Twitter} alt={Twitter} />
           <img width='75%' src={Discord} alt={Discord} />
-        </StyledNavDiv>
+        </StyledNavDiv> */}
+          <img width='100%' src={walkthrough} alt="img"/>
        
-        <div style={{ height: '150px'}}></div>
+        {/* <div style={{ height: '150px'}}></div> */}
       </Container>
       </StyledWalkthrough>
     </>

@@ -46,7 +46,7 @@ width: 480px;
 @media (max-width: 768px) {
   width: 90%;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 `
 const StyledButton = styled.button`
@@ -58,7 +58,11 @@ const StyledButton = styled.button`
   font-size: 18px;
   border: 0;
   outline: 0;
-  cursor: pointer;  
+  cursor: pointer;
+  margin-top: 20px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `
 const StyledDiv = styled.div`
 @media (max-width: 768px) {
