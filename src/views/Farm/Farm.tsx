@@ -9,6 +9,7 @@ import PageHeader from '../../components/PageHeader';
 import Spacer from '../../components/Spacer';
 import Harvest from './components/Harvest';
 import Stake from './components/Stake';
+import Wallet from '../../icons/wallet'
 
 import useFarm from '../../hooks/useFarm';
 import useRedeem from '../../hooks/useRedeem';
@@ -26,7 +27,7 @@ const Farm: React.FC = () => {
   return account && farm ? (
     <>
       <PageHeader
-        icon="🏦"
+        icon={<img src={require("../../img/chef.png")} alt='Che' />}
         subtitle={`Deposit ${farm?.depositTokenName} and earn ${farm?.earnTokenName}`}
         title={farm?.name}
       />
@@ -43,8 +44,8 @@ const Farm: React.FC = () => {
         <Spacer size="lg" />
         {farm.depositTokenName.includes('LP') && <LPTokenHelpText farm={farm} />}
         <Spacer size="lg" />
-        <div>
-          <Button onClick={onRedeem} text="Settle & Withdraw" />
+        <div style={{width:'308px'}}>
+          <Button onClick={onRedeem} text="Settle & Withdraw" variant='secondary' size='sm'/>
         </div>
         <Spacer size="lg" />
       </StyledFarm>
@@ -70,7 +71,7 @@ const LPTokenHelpText: React.FC<{ farm: FarmEntity }> = ({ farm }) => {
   uniswapUrl = '#';
   return (
     <StyledLink href={uniswapUrl}>
-      {`🦄  Provide liquidity to ${pairName} on Uniswap  🦄`}
+      {`Provide liquidity to ${pairName} on Uniswap`}
     </StyledLink>
   );
 };
@@ -90,12 +91,18 @@ const FarmNotFound = () => {
 const UnlockWallet = () => {
   const { connect } = useWallet();
   return (
-    <Center>
-      <Button onClick={() => connect('injected')} text="Unlock Wallet" />
+    <Center >
+      <div style={{marginBottom:'50px'}}>
+        <img src={require("../../img/chef.png")} alt="Chef"/>
+      </div>
+      
+      <Button onClick={() => connect('injected')} text="Unlock Wallet" size='lg' >
+        <Wallet style={{marginRight:'15px', marginLeft:'-35px'}}/>
+      </Button>
     </Center>
   );
 };
-
+ 
 const StyledFarm = styled.div`
   align-items: center;
   display: flex;
@@ -117,7 +124,7 @@ const StyledLink = styled.a`
 
 const StyledCardsWrapper = styled.div`
   display: flex;
-  width: 600px;
+  width: 750px;
   @media (max-width: 768px) {
     width: 100%;
     flex-flow: column nowrap;
@@ -135,10 +142,15 @@ const StyledCardWrapper = styled.div`
 `;
 
 const Center = styled.div`
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+display: flex;
+flex: 1;
+width: 600px;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+@media only screen and (max-width: 768px){
+  width: 280px;
+}
 `;
 
 export default Farm;

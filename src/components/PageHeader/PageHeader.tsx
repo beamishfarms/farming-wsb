@@ -31,10 +31,10 @@ const StyledPageHeader = styled.div`
 
 const StyledIcon = styled.div`
   font-size: 96px;
-  height: 162px;
+  min-height: 162px;
   line-height: 96px;
   text-align: center;
-  width: 162px;
+  min-width: 162px;
 `
 
 const StyledTitle = styled.h1`

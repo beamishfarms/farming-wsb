@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../../assets/img/farmer.png';
+import logo from '../../img/WallStreetBetsheader.png';
 import Layerx from '../../icons/layerx'
 
 const Logo: React.FC = () => {
   return (
-    <StyledLogo>
-      <img src={logo} height="40" style={{ marginTop: -4 }}/>
-      <StyledLink href="/">Farming WSB</StyledLink>
+    <StyledLogo>      
+      <StyledLink href="/">
+        <img src={logo} alt='logo' height="50" style={{ marginTop: -4 }} width='100%'/>
+      </StyledLink>
     </StyledLogo>
   );
 };

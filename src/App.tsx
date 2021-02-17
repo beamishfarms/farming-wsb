@@ -9,23 +9,30 @@ import WsbProvider from './contexts/WsbProvider';
 import ModalsProvider from './contexts/Modals';
 
 import Farms from './views/Farms';
+import Home from './views/Home'
 
 import store from './state';
 import theme from './theme';
 import config from './config';
 import Updaters from './state/Updaters';
 import Popups from './components/Popups';
+import Background from './components/Background'
 
 const App: React.FC = () => {
   return (
     <Providers>
       <Router>
+      <Background>
         <Switch>
-          <Route path="/farm">
-            <Farms />
-          </Route>
+            <Route path="/farm">
+              <Farms />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
           <Redirect from="/" to="farm" />
         </Switch>
+        </Background>
       </Router>
     </Providers>
   );
