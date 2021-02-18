@@ -31,7 +31,8 @@ const FeatureCard: React.FC<ImgProps> = (props) => {
 };
 
 const StyledTitle = styled.h3`
-  
+width: 80%;
+margin: 20px auto;
 `
 const StyledText = styled.p`
   width: 90%;
