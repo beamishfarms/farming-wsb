@@ -40,6 +40,7 @@ export default function Updater(): null {
     setState({ chainId, blockNumber: null });
 
     const provider = new ethers.providers.Web3Provider(ethereum);
+    
     provider
       .getBlockNumber()
       .then(blockNumberCallback)
@@ -48,7 +49,7 @@ export default function Updater(): null {
       );
 
     provider.on('block', blockNumberCallback)
-    return () => provider.removeListener('block', blockNumberCallback);
+    // return () => provider.removeListener('block', blockNumberCallback);
   }, [dispatch, chainId, ethereum, blockNumberCallback, windowVisible]);
 
   const debouncedState = useDebounce(state, 100);
