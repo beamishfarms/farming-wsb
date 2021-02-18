@@ -17,8 +17,8 @@ const Walkthrough: React.FC = () => {
 
     
       <Container>
-        <StyledTitle>Walkthrough</StyledTitle>
-        <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
+        <StyledTitle>Join our community</StyledTitle>
+        {/* <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText> */}
         {/* <StyledIframe 
         width="100%" 
         height="720" 
@@ -29,14 +29,14 @@ const Walkthrough: React.FC = () => {
         title='Porter Robinson'
         ></StyledIframe> */}
         
-        {/* <StyledNavDiv >
+        <StyledNavDiv >
           <img width='75%' src={Telegram} alt={Telegram} style={{}}/>
           <img width='75%' src={Twitter} alt={Twitter} />
           <img width='75%' src={Discord} alt={Discord} />
-        </StyledNavDiv> */}
-          <img width='100%' src={walkthrough} alt="img"/>
+        </StyledNavDiv>
+          {/* <img width='100%' src={walkthrough} alt="img"/> */}
        
-        {/* <div style={{ height: '150px'}}></div> */}
+        <div style={{ height: '150px'}}></div>
       </Container>
       </StyledWalkthrough>
     </>
