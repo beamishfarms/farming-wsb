@@ -3,22 +3,22 @@ import styled from 'styled-components'
 
 import cross from '../../../../img/cross.png'
 import SocialNav from '../SocialNav'
-import Telegram from '../../../../icons/red/Telegram.svg'
-import Twitter from '../../../../icons/red/Twitter.svg'
+import Telegram from '../../../../icons/white/Telegram.svg'
+import Twitter from '../../../../icons/white/Twitter.svg'
 import Discord from '../../../../icons/red/Discord.svg'  
-import walkthrough from '../../../../img/walkthrough.jpg'
-import youtube from '../../../../icons/youtube/youtube.svg'  
+import darkerwalkthrough from '../../../../img/darkerwalkthrough.png'
+import youtube from '../../../../icons/white/youtube.svg'  
   
 
 const Walkthrough: React.FC = () => {
 
   return (
     <>
-    <StyledWalkthrough style={{backgroundImage: `url(${cross})`}}>
+    <StyledWalkthrough style={{backgroundImage: `url(${darkerwalkthrough})`}}>
 
+        <StyledTitle>Join our community</StyledTitle>
     
       <Container>
-        <StyledTitle>Join our community</StyledTitle>
         {/* <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText> */}
         {/* <StyledIframe 
         width="100%" 
@@ -51,7 +51,7 @@ const Walkthrough: React.FC = () => {
 };
 
 const StyledWalkthrough = styled.div`
-backgroundImage: 'url(${cross})'
+backgroundImage: 'url(${darkerwalkthrough})'
 background-size: cover;
 background-position: center center;
 background-repeat: no-repeat;
@@ -83,7 +83,7 @@ const Container = styled.div`
 const StyledTitle = styled.h3`
   font-size: 36px;
   text-align: center;
-  margin: 0;
+  padding: 20px 0 0 0;
 `
 const StyledText = styled.p`
   color: #B4B4B4;
