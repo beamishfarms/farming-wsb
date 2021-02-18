@@ -35,7 +35,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <TokenSymbol symbol="WSB" />
           <StyledBalance>
             <StyledValue>{displayBacBalance}</StyledValue>
-            <Label text="LAYERx Earned" />
+            <Label text="WSB Earned" />
           </StyledBalance>
         </StyledBalanceWrapper>
       </Balances>
