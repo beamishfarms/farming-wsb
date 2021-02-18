@@ -40,6 +40,7 @@ export default function Updater(): null {
     setState({ chainId, blockNumber: null });
 
     const provider = new ethers.providers.Web3Provider(ethereum);
+    
     provider
       .getBlockNumber()
       .then(blockNumberCallback)
