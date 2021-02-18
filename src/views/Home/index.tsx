@@ -16,9 +16,7 @@ const Home: React.FC = () => {
        <Hero />
        <Main />
        <Walkthrough />
-       <Footer /> 
-
-      
+       <Footer />      
     </>
   );
 };

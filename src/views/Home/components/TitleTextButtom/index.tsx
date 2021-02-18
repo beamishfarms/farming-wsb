@@ -9,6 +9,7 @@ interface TitleTextButtom {
   titlesize?: string
   textsize?: string
   textcolor?: string
+  src?: string
 }
 
 const TitleTextButtom: React.FC<TitleTextButtom> = (props) => {
@@ -17,7 +18,7 @@ const TitleTextButtom: React.FC<TitleTextButtom> = (props) => {
     <div>
       <StyledTitle style={{fontSize:props.titlesize}}>{props.title}</StyledTitle>
       <StyledText style={{fontSize:props.textsize, color:props.textcolor}}>{props.text}</StyledText>
-      <Link to='/farm' style={{textDecoration: 'none'}} >
+      <Link to={props.src} style={{textDecoration: 'none'}} >
         <StyledDiv>
         <StyledButton >
         
@@ -46,7 +47,7 @@ width: 480px;
 @media (max-width: 768px) {
   width: 90%;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 `
 const StyledButton = styled.button`
@@ -58,7 +59,11 @@ const StyledButton = styled.button`
   font-size: 18px;
   border: 0;
   outline: 0;
-  cursor: pointer;  
+  cursor: pointer;
+  margin-top: 20px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `
 const StyledDiv = styled.div`
 @media (max-width: 768px) {

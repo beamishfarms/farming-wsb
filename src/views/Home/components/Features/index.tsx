@@ -16,16 +16,16 @@ const Features: React.FC = () => {
     <StyledFeatures>
       <FeatureCard 
       img={wbs1} 
-      title='TITLE HERE' 
-      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae augue non dui volutpat sagittis. Ut imperdiet sapien ut auctor mattis.' />
+      title='TRADE LIKE A TRUE DEGEN' 
+      text='WSB provides you with the tools to trade like a true degen, farm WSB and more' />
       <FeatureCard 
       img={wbs2} 
-      title='TITLE HERE' 
-      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae augue non dui volutpat sagittis. Ut imperdiet sapien ut auctor mattis.'/>
+      title='DIAMOND HANDS ONLY' 
+      text='If you HODL WSB you get the tendies, Do not sell your WSB to the suits!'/>
       <FeatureCard 
       img={wbs3} 
-      title='TITLE HERE' 
-      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae augue non dui volutpat sagittis. Ut imperdiet sapien ut auctor mattis.'/>
+      title='A PROJECT BY SATOSHI STREET BETS COMMUNITY' 
+      text='We’re all in this together retards, we will HODL until the end'/>
     </StyledFeatures>
     </>
   );

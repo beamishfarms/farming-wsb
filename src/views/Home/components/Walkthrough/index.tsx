@@ -6,6 +6,8 @@ import SocialNav from '../SocialNav'
 import Telegram from '../../../../icons/red/Telegram.svg'
 import Twitter from '../../../../icons/red/Twitter.svg'
 import Discord from '../../../../icons/red/Discord.svg'  
+import walkthrough from '../../../../img/walkthrough.jpg'
+import youtube from '../../../../icons/youtube/youtube.svg'  
   
 
 const Walkthrough: React.FC = () => {
@@ -16,8 +18,8 @@ const Walkthrough: React.FC = () => {
 
     
       <Container>
-        <StyledTitle>Walkthrough</StyledTitle>
-        <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
+        <StyledTitle>Join our community</StyledTitle>
+        {/* <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText> */}
         {/* <StyledIframe 
         width="100%" 
         height="720" 
@@ -29,10 +31,17 @@ const Walkthrough: React.FC = () => {
         ></StyledIframe> */}
         
         <StyledNavDiv >
-          <img width='75%' src={Telegram} alt={Telegram} style={{}}/>
-          <img width='75%' src={Twitter} alt={Twitter} />
-          <img width='75%' src={Discord} alt={Discord} />
+          <a target='_blank' href="https://t.me/satoshistreetbets">
+            <img width='75%' src={Telegram} alt={Telegram} style={{}}/>
+          </a>
+          <a target='_blank' href="https://twitter.com/BetsPodcast">
+            <img width='75%' src={Twitter} alt={Twitter} />
+          </a>
+          <a target='_blank' href="https://www.youtube.com/channel/UCuvw3AlJmW-db0OTWNd1I-Q">
+            <img width='75%' src={youtube} alt={youtube} />
+          </a>
         </StyledNavDiv>
+          {/* <img width='100%' src={walkthrough} alt="img"/> */}
        
         <div style={{ height: '150px'}}></div>
       </Container>
@@ -44,8 +53,9 @@ const Walkthrough: React.FC = () => {
 const StyledWalkthrough = styled.div`
 backgroundImage: 'url(${cross})'
 background-size: cover;
-background-position: top left;
+background-position: center center;
 background-repeat: no-repeat;
+width: 100%;
 `
 const StyledNavDiv = styled.div`
 display: grid;

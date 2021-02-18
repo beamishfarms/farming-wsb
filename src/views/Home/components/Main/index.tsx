@@ -32,8 +32,8 @@ const Main: React.FC = () => {
   return (
     <>
       <StyledMain style={{backgroundImage: `url(${dollar})`}}>
-        <StyledTitle>Getting Started</StyledTitle>
-        <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vehicula dolor ut suscipit.</StyledText>
+        <StyledTitle>Getting Started Has Never Been Easier</StyledTitle>
+        <StyledText>Farming WSB token for LP providers on Uniswap WSB/ETH pool then locking UNI- V2 tokens</StyledText>
           <StyledBar >
           <StyledRedBar onClick={() => setTab('agregattor')} style={{background: buttonColor2()}}>
             <StyledText style= {{color: '#FFFFFF' }}>Aggregator</StyledText>
@@ -46,12 +46,14 @@ const Main: React.FC = () => {
         {tab === 'agregattor' && 
         <Grid >
           <TitleTextButtom 
-          title='AGGREGATOR' 
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae augue non dui volutpat sagittis. Ut imperdiet sapien ut auctor mattis. Mauris volutpat sed quam fringilla auctor. Mauris convallis sapien at tincidunt sollicitudin. Quisque quis elementum tellus. Integer molestie commodo mi et accumsan. Phasellus egestas, quam nec cursus rhoncus, arcu ipsum lacinia turpis, sit amet aliquet nibh arcu sit amet erat. Fusce dictum ante in elementum ultricies.'
+          title='Swap your tokens like a true degen on our new DEX aggregator' 
+          text='Our branded DEX Aggregator provides you with the best price and liquidity routing by aggregating over 13 DEXs'
           button='GO TO APP'
           titlesize='24px'
           textsize='18px'
-          textcolor='#B4B4B4'/>
+          textcolor='#B4B4B4'
+          src='#'
+          />
           <StyledGrid>
             <Img src={mobile}/>
           </StyledGrid>
@@ -59,12 +61,14 @@ const Main: React.FC = () => {
         {tab === 'farming' && 
         <Grid >
         <TitleTextButtom 
-        title='FARMING' 
-        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae augue non dui volutpat sagittis. Ut imperdiet sapien ut auctor mattis. Mauris volutpat sed quam fringilla auctor. Mauris convallis sapien at tincidunt sollicitudin. Quisque quis elementum tellus. Integer molestie commodo mi et accumsan. Phasellus egestas, quam nec cursus rhoncus, arcu ipsum lacinia turpis, sit amet aliquet nibh arcu sit amet erat. Fusce dictum ante in elementum ultricies.'
+        title='Farming made easy' 
+        text='Farming WSB tokens is easy, all you have to do is provide liquidity on Uniswap for WSB/ETH pair and lock your UNI-V2 tokens in our farming pools'
         button='GO TO APP'
         titlesize='24px'
         textsize='18px'
-        textcolor='#B4B4B4'/>
+        textcolor='#B4B4B4'
+        src='/farm'
+        />
         <StyledGrid>
           <Img src={farm1}/>
         </StyledGrid>
