@@ -51,7 +51,9 @@ const Main: React.FC = () => {
           button='GO TO APP'
           titlesize='24px'
           textsize='18px'
-          textcolor='#B4B4B4'/>
+          textcolor='#B4B4B4'
+          src='#'
+          />
           <StyledGrid>
             <Img src={mobile}/>
           </StyledGrid>
@@ -64,7 +66,9 @@ const Main: React.FC = () => {
         button='GO TO APP'
         titlesize='24px'
         textsize='18px'
-        textcolor='#B4B4B4'/>
+        textcolor='#B4B4B4'
+        src='/farm'
+        />
         <StyledGrid>
           <Img src={farm1}/>
         </StyledGrid>

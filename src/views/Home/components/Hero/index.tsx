@@ -18,7 +18,9 @@ const Hero: React.FC = () => {
           <TitleTextButtom 
           title='WallStreetBets Token (WSB)'
           text='The WSB movement for financial democracy started on reddit and it became a global phenomenon. This is why decided to create a token to give our community a tool to grow their personal assets by farming the WSB token.'
-          button='GO TO APP' />
+          button='GO TO APP' 
+          src='/farm'
+          />
           <StyledGrid>
 
           <Img src={wsblanding}/>
