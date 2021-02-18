@@ -37,7 +37,7 @@ const Harvest: React.FC<HarvestProps> = ({ farm }) => {
             </CardIcon>
             <StyledDiv >
             <Value value={getDisplayBalance(earnings)} />
-            <Label text="LAYERx Earned" />
+            <Label text="WSB Earned" />
             </StyledDiv>
           </StyledCardHeader>
           <StyledCardActions>
