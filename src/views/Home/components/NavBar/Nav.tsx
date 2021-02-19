@@ -5,7 +5,11 @@ import { NavLink } from 'react-router-dom'
 const Nav: React.FC = () => {
   return (
     <StyledNav>
-      <StyledLink exact activeClassName="active" to="/farm/WSBETHPool">Farm</StyledLink>
+      <StyledLink exact activeClassName="active" to="/farm/WSBETHPool">
+        <StyledButton>
+          Farm
+        </StyledButton>
+      </StyledLink>
     </StyledNav>
   )
 }
@@ -26,6 +30,24 @@ const StyledLink = styled(NavLink)`
   }
   &.active {
     color: ${props => props.theme.color.white};
+  }
+`
+
+const StyledButton = styled.button`
+  height: 40px;
+  width: 120px;
+  border-radius: 100px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  font-size: 14px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 60px;
+    font-size: 12px;
+    margin-top: -5px;
   }
 `
 
